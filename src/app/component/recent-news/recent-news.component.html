@@ -1,0 +1,24 @@
+<div class="container">
+    <h2 style="color:rgb(4, 10, 68)">Today's Highlighted News</h2>
+    
+     
+        <ng-container *ngFor="let course of news">
+     
+            <div class="course-container">
+              
+    <div class="course-card">
+    <div>
+    <img [src]="course.image" style="width:300px; height:200px;">
+    </div>
+    <div class="course-name"><h4>{{ course.name}}</h4></div>
+    
+    <div class="course-buttons">
+    <button class="btn btn-read" (click)="onClick()">Read Later</button>
+    <button  class="btn btn-show" routerLink = "/courses/course/{{course.id}}">Read More</button>
+    </div>
+    </div>
+    </div>  
+     
+        </ng-container>
+    </div>
+     
